@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-
-const HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +11,7 @@ const HomePage({super.key});
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/smartphone.png',
-              width: 100,
-              height: 100,
-            ),
+            Image.asset('assets/smartphone.png', width: 100, height: 100),
             SizedBox(height: 16),
             Text('Welcome to the Catalog App!', style: TextStyle(fontSize: 18)),
             SizedBox(height: 16),
@@ -25,7 +20,7 @@ const HomePage({super.key});
               label: Text('Go to Catalog'),
               onPressed: () {
                 Navigator.pushNamed(context, '/catalog');
-              }
+              },
             ),
             SizedBox(height: 12),
             ElevatedButton.icon(
@@ -33,7 +28,7 @@ const HomePage({super.key});
               label: Text('Go to Profile'),
               onPressed: () {
                 Navigator.pushNamed(context, '/profile');
-              }
+              },
             ),
           ],
         ),

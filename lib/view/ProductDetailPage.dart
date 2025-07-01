@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-
-import 'package:catalog_app/controller/MessagingService.dart';
+import 'package:catalog_app/controller/MessagingController.dart';
 import 'package:catalog_app/model/Item.dart'; // Add to pubspec.yaml
+import 'package:flutter/material.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final Item item;
@@ -15,20 +14,29 @@ class ProductDetailPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(item.imageUrl, height: 250, width: double.infinity, fit: BoxFit.cover),
+            Image.network(
+              item.imageUrl,
+              height: 250,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(item.name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                  Text(
+                    item.name,
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
                   SizedBox(height: 12),
                   Text(item.description, style: TextStyle(fontSize: 16)),
                   SizedBox(height: 24),
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton.icon(
-                      onPressed: () => MessagingService.chatToShop(context, item),
+                      onPressed: () =>
+                          MessagingController.chatToShop(context, item),
                       icon: Icon(Icons.chat),
                       label: Text("Chat to Shop"),
                       style: ElevatedButton.styleFrom(
@@ -36,7 +44,7 @@ class ProductDetailPage extends StatelessWidget {
                         textStyle: TextStyle(fontSize: 18),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

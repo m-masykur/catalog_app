@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-
-import 'package:catalog_app/controller/UserService.dart';
+import 'package:catalog_app/controller/UserController.dart';
 import 'package:catalog_app/model/User.dart';
+import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -16,12 +15,12 @@ class ProfilePage extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
-            Image.asset(
-              profileAsset,
-              height: 150
-            ),
+            Image.asset(profileAsset, height: 150),
             SizedBox(height: 16),
-            Text('My Profile', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            Text(
+              'My Profile',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 8),
             ListTile(
               leading: CircleAvatar(
@@ -29,7 +28,10 @@ class ProfilePage extends StatelessWidget {
                 child: Icon(Icons.person, color: Colors.blue),
               ),
               title: Text('owner', style: TextStyle(fontSize: 20)),
-              subtitle: Text(user.name, style: TextStyle(fontSize: 16, color: Colors.black54)),
+              subtitle: Text(
+                user.name,
+                style: TextStyle(fontSize: 16, color: Colors.black54),
+              ),
             ),
             ListTile(
               leading: CircleAvatar(
@@ -37,7 +39,10 @@ class ProfilePage extends StatelessWidget {
                 child: Icon(Icons.email, color: Colors.blue),
               ),
               title: Text('Email', style: TextStyle(fontSize: 20)),
-              subtitle: Text(user.email, style: TextStyle(fontSize: 16, color: Colors.black54)),
+              subtitle: Text(
+                user.email,
+                style: TextStyle(fontSize: 16, color: Colors.black54),
+              ),
             ),
 
             SizedBox(height: 16),
@@ -59,5 +64,4 @@ class ProfilePage extends StatelessWidget {
       ),
     );
   }
-
 }

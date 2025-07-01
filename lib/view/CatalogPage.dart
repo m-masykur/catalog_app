@@ -1,16 +1,16 @@
-import 'package:flutter/material.dart';
-
-import 'package:catalog_app/controller/ItemService.dart';
+import 'package:catalog_app/controller/ItemController.dart';
 import 'package:catalog_app/model/Item.dart';
 import 'package:catalog_app/view/ProductDetailPage.dart';
+import 'package:flutter/material.dart';
 
 class CatalogPage extends StatelessWidget {
+  final ItemController itemController = ItemController();
 
-  const CatalogPage({super.key});
+  CatalogPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<Item> items = ItemService.getAllItem();
+    final List<Item> items = itemController.getAllItem();
 
     return Scaffold(
       appBar: AppBar(title: Text('Catalog')),
@@ -18,7 +18,6 @@ class CatalogPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           // Image.asset('assets/catalog.png', height: 100, fit: BoxFit.cover),
-
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16),
             child: Column(
@@ -81,7 +80,7 @@ class CatalogPage extends StatelessWidget {
             ),
           ),
         ],
-      )
+      ),
     );
   }
 
