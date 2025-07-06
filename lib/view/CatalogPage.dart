@@ -24,8 +24,14 @@ class CatalogPage extends StatelessWidget {
               children: [
                 Icon(Icons.storefront, size: 48, color: Colors.green),
                 SizedBox(height: 8),
-                Text('Our Products Catalog',style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-                Text('Explore and discover our top picks!.', style: TextStyle(fontSize: 14, color: Colors.black54)),
+                Text(
+                  'Our Products Catalog',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'Explore and discover our top picks!.',
+                  style: TextStyle(fontSize: 14, color: Colors.black54),
+                ),
               ],
             ),
           ),
@@ -43,11 +49,16 @@ class CatalogPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.blue.shade100,
-                      child: Icon(Icons.shopping_bag, color: Colors.blue),
+                    leading: ClipOval(
+                      child: Image.network(
+                        item.imageUrl,
+                        width: 50,
+                        height: 50,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                     title: Text(item.name, style: TextStyle(fontSize: 18)),
+                    subtitle: Text("Rp ${item.price.toStringAsFixed(0)}"),
                     onTap: () {
                       Navigator.push(
                         context,
@@ -61,26 +72,8 @@ class CatalogPage extends StatelessWidget {
               },
             ),
           ),
-
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: ElevatedButton.icon(
-              icon: Icon(Icons.arrow_back),
-              label: Text('Back to Home'),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 12),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-          ),
         ],
       ),
     );
   }
-
 }

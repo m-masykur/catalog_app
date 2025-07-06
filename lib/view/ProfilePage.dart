@@ -27,7 +27,7 @@ class ProfilePage extends StatelessWidget {
                 backgroundColor: Colors.blue.shade100,
                 child: Icon(Icons.person, color: Colors.blue),
               ),
-              title: Text('owner', style: TextStyle(fontSize: 20)),
+              title: Text('Nama Lengkap', style: TextStyle(fontSize: 20)),
               subtitle: Text(
                 user.name,
                 style: TextStyle(fontSize: 16, color: Colors.black54),
@@ -36,27 +36,34 @@ class ProfilePage extends StatelessWidget {
             ListTile(
               leading: CircleAvatar(
                 backgroundColor: Colors.blue.shade100,
-                child: Icon(Icons.email, color: Colors.blue),
+                child: Icon(Icons.numbers, color: Colors.blue),
               ),
-              title: Text('Email', style: TextStyle(fontSize: 20)),
+              title: Text('NIM', style: TextStyle(fontSize: 20)),
               subtitle: Text(
-                user.email,
+                user.nim,
                 style: TextStyle(fontSize: 16, color: Colors.black54),
               ),
             ),
-
-            SizedBox(height: 16),
-            ElevatedButton.icon(
-              icon: Icon(Icons.arrow_back),
-              label: Text('Back to Home'),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.blue.shade100,
+                child: Icon(Icons.class_rounded, color: Colors.blue),
+              ),
+              title: Text('Kelas', style: TextStyle(fontSize: 20)),
+              subtitle: Text(
+                user.classId,
+                style: TextStyle(fontSize: 16, color: Colors.black54),
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.blue.shade100,
+                child: Icon(Icons.phone, color: Colors.blue),
+              ),
+              title: Text('Kontak', style: TextStyle(fontSize: 20)),
+              subtitle: Text(
+                user.contact,
+                style: TextStyle(fontSize: 16, color: Colors.black54),
               ),
             ),
           ],

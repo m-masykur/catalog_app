@@ -29,6 +29,9 @@ class ProductDetailPage extends StatelessWidget {
                     item.name,
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
+                  const SizedBox(height: 8),
+                  Text("Rp ${item.price.toStringAsFixed(0)}",
+                      style: const TextStyle(fontSize: 18, color: Colors.green)),
                   SizedBox(height: 12),
                   Text(item.description, style: TextStyle(fontSize: 16)),
                   SizedBox(height: 24),
@@ -38,7 +41,7 @@ class ProductDetailPage extends StatelessWidget {
                       onPressed: () =>
                           MessagingController.chatToShop(context, item),
                       icon: Icon(Icons.chat),
-                      label: Text("Chat to Shop"),
+                      label: Text("Whatsapp"),
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(vertical: 16),
                         textStyle: TextStyle(fontSize: 18),
