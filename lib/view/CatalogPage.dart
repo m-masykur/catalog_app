@@ -48,7 +48,6 @@ class CatalogPage extends StatelessWidget {
                       child: Icon(Icons.shopping_bag, color: Colors.blue),
                     ),
                     title: Text(item.name, style: TextStyle(fontSize: 18)),
-                    subtitle: Text(item.description),
                     onTap: () {
                       Navigator.push(
                         context,

@@ -16,6 +16,27 @@ class ItemController {
       imageUrl:
           'https://fastly.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4',
     ),
+    Item(
+      name: 'Vintage Camera',
+      description:
+          'A classic film camera that adds charm to your photography collection, perfect for retro-style shoots.',
+      imageUrl:
+          'https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU',
+    ),
+    Item(
+      name: 'Rustic Chair',
+      description:
+          'Handcrafted wooden chair with a rustic finish, ideal for cozy corners or reading nooks.',
+      imageUrl:
+          'https://fastly.picsum.photos/id/311/1000/563.jpg?hmac=M6WX06qTw-1eQj4z12Zh-NPeJnll-6a_yx9CbNnRPHs',
+    ),
+    Item(
+      name: 'Ceramic Vase',
+      description:
+          'A minimalist ceramic vase, perfect for displaying fresh or dried flowers with elegance.',
+      imageUrl:
+          'https://fastly.picsum.photos/id/82/1500/997.jpg?hmac=VcdCqu9YiLpbCtr8YowUCSUD3-245TGekiXmtiMXotw',
+    ),
   ];
 
   List<Item> getAllItem() {
