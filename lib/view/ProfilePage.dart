@@ -27,7 +27,7 @@ class ProfilePage extends StatelessWidget {
                 backgroundColor: Colors.blue.shade100,
                 child: Icon(Icons.person, color: Colors.blue),
               ),
-              title: Text('Nama Lengkap', style: TextStyle(fontSize: 20)),
+              title: Text('Fullname', style: TextStyle(fontSize: 20)),
               subtitle: Text(
                 user.name,
                 style: TextStyle(fontSize: 16, color: Colors.black54),
@@ -38,7 +38,7 @@ class ProfilePage extends StatelessWidget {
                 backgroundColor: Colors.blue.shade100,
                 child: Icon(Icons.numbers, color: Colors.blue),
               ),
-              title: Text('NIM', style: TextStyle(fontSize: 20)),
+              title: Text('Student Number', style: TextStyle(fontSize: 20)),
               subtitle: Text(
                 user.nim,
                 style: TextStyle(fontSize: 16, color: Colors.black54),
@@ -49,7 +49,7 @@ class ProfilePage extends StatelessWidget {
                 backgroundColor: Colors.blue.shade100,
                 child: Icon(Icons.class_rounded, color: Colors.blue),
               ),
-              title: Text('Kelas', style: TextStyle(fontSize: 20)),
+              title: Text('Class', style: TextStyle(fontSize: 20)),
               subtitle: Text(
                 user.classId,
                 style: TextStyle(fontSize: 16, color: Colors.black54),
@@ -60,7 +60,7 @@ class ProfilePage extends StatelessWidget {
                 backgroundColor: Colors.blue.shade100,
                 child: Icon(Icons.phone, color: Colors.blue),
               ),
-              title: Text('Kontak', style: TextStyle(fontSize: 20)),
+              title: Text('Contact', style: TextStyle(fontSize: 20)),
               subtitle: Text(
                 user.contact,
                 style: TextStyle(fontSize: 16, color: Colors.black54),
